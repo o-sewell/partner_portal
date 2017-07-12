@@ -1,0 +1,112 @@
+
+.navigation {
+  background: #0E4567;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  min-width: 280px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+
+.nav-list-items {
+  text-align: center;
+  padding-bottom: .5em;
+  width: 100%;
+}
+
+
+.mc_logo {
+  align-self: center;
+}
+
+.macrium-logo {
+  height: 4em;
+  width: auto;
+  animation: rotate 2s  ease-in  forwards ;
+}
+.nav .nav__item {
+   list-style-type: none;
+   color: white;
+   margin: 6px 0;
+}
+
+.nav .nav__item  a  {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav .nav__item a:hover {
+  color: $color-secondary;
+}
+
+.nav__item i {
+  vertical-align: middle;
+  font-size: 15px;
+  margin-right: .25em;
+}
+
+
+h3 {
+margin: 0;
+padding: 0;
+-webkit-margin-before: 0;
+-webkit-margin-after: 0;
+}
+
+@media(min-width:769px) {
+   .nav-list-items {
+      align-items: flex-start;
+      align-self: center;
+      text-align: left;
+      margin-top: 1.75em;
+   }
+
+   .nav .nav__item {
+      list-style-type: none;
+      color: white;
+      margin: 10px 0;
+      display: flex;
+      font-size: 1.15em;
+      flex-direction: column;
+      padding: 1em 0;
+   }
+
+   .nav  .logo {
+      padding: 0;
+   }
+
+   .nav-list-items .nav__item a {
+      margin-left: 2em;
+   }
+
+   .nav__item i {
+     vertical-align: middle;
+     font-size: 22px;
+     margin-right: .5em;
+   }
+
+   .nav-list-items .nav__item:hover {
+       background: darken( $color-primary, 5% )
+   }
+
+}
+
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}

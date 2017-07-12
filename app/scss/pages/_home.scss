@@ -1,0 +1,126 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-row1,.container-row2, .container-row3 {
+  display: flex;
+  align-items: stretch;
+}
+
+.tile {
+  background: #edf4f7;
+  border-radius: .35em;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex: 1 1 50%;
+  margin: .5em;
+  box-shadow: 0 2.5px 5px rgba(50,50,93,.3);
+}
+
+.orders .tile__inner, .distributors .tile__inner {
+  overflow-y: scroll;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+/* end of layout */
+
+/* global styles */
+
+.content {
+  padding: .25em 1em;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.6em;
+  margin-top: 0;
+  background: $color-secondary;
+  color: $color-text;
+  padding: .2em 0;
+}
+
+.welcome ul, .pricing ul, .resources ul {
+  list-style-type: square;
+  padding: .5em 1em
+}
+
+
+/* row 1 styles welcome to mvp resellers and orders */
+.welcome {
+  flex: 2;
+}
+.orders {
+  flex: 1;
+}
+
+.orders-content {
+  overflow-y:scroll;
+}
+
+
+
+.pricing,.resources,.distributors {
+  order: 1; /* change order to swap position */
+}
+
+.view-more {
+  margin-top: auto;
+}
+
+.distributors__logo {
+  height: 0;
+  width: 0;
+  height: 3em;
+  width: auto;
+  display: block;
+  margin: 2em auto;
+}
+
+
+.main-wrapper {
+  margin: 0 .5em;
+}
+
+@media(min-width: 768px) {
+  .nav_and_main_wrapper {
+  display: flex;
+  }
+}
+
+@media(max-width: 967px) {
+  .container-row1,.container-row2, .container-row3 {
+    display: block;
+  }
+
+
+}
+
+@media(min-width:1000px) {
+  .main-wrapper {
+    margin: .25em .5em;
+  }
+  
+  .tile {
+    margin: .75em;
+  }
+
+  .row-2__inner,.row-2__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+}
+
+.second_nav {
+  display: none;
+}
+
+.active {
+  display: block;
+}
